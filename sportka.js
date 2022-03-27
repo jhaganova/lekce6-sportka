@@ -1,14 +1,24 @@
 // SPORTKA
 
 let vyherniCisla = document.querySelector('#vyherni-cisla');
-let historieCisel = document.querySelector('#historie-losovani');
+let historieLosovani = document.querySelector('#historie-losovani');
+let historickySeznamCisel = [];
 let runningTimeouts = [];
+
 
 function drawNumbers() {
     vyherniCisla.innerHTML = "";
     let osudi = [];
     let tazenaCisla = [];
     clearAllRunningTimeouts();
+
+    // historie losovani
+    historieLosovani.innerHTML = '';
+
+    historickySeznamCisel.forEach(function(ele, idx, arr) {
+        historieLosovani.innerHTML += '<p class="historicke-losovani">' + ele.join(' ') + '</p>';
+    });
+
 
     // generovani osudi
     for (let i = 1; i <= 49; i = i + 1) {
@@ -31,8 +41,7 @@ function drawNumbers() {
 
     }
 
-    historieCisel.innerHTML += '<p class="historicke-losovani">' + tazenaCisla.join(' ') + '</p>';
-
+    historickySeznamCisel.push(tazenaCisla);
 
 }
 

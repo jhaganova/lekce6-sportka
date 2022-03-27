@@ -98,14 +98,15 @@ h1 {
 
 .grid {
 	display: grid;
-	grid-template-columns: 1fr 4fr;
+	grid-template-columns: max-content auto;
 	grid-template-rows: 100vh;
 }
 
 .historie {
-	margin: 20px;
+	padding: 20px 40px;
 	color: #3a3a3a;
 	border-right: solid 1px #444883;
+	min-width: 320px;
 }
 
 .obsah {
@@ -116,3 +117,29 @@ h1 {
 	display: flex;
 	justify-content: center;
 }
+
+
+.historie__header {
+	margin-bottom: 20px;
+	padding-bottom: 10px;
+	position: relative;
+	text-align: center;
+}
+
+.historie__header::after {
+	display: block;
+	content: '';
+	width: 100%;
+	height: 1px;
+	background: black;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.historicke-losovani {
+	font-family: Courier, monospace;
+	font-weight: bold;
+	font-size: 20px;
+}
+
