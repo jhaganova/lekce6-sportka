@@ -41,7 +41,7 @@ function drawNumbers() {
 
     }
 
-    historickySeznamCisel.push(tazenaCisla);
+    historickySeznamCisel.unshift(tazenaCisla);
 
 }
 
