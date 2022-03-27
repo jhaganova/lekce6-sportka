@@ -6,9 +6,9 @@ html { box-sizing: border-box; }
 body {
 	margin: 0;
 	min-height: 100vh;
-	display: flex;
+	/* display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: center; */
 	font-family: 'Paytone One', sans-serif;
 	color: white;
 	background-image: linear-gradient(-225deg, #B6CEE8 0%, #F578DC 100%);
@@ -95,3 +95,24 @@ h1 {
 	transform: scale(0.98);
 }
 
+
+.grid {
+	display: grid;
+	grid-template-columns: 1fr 4fr;
+	grid-template-rows: 100vh;
+}
+
+.historie {
+	margin: 20px;
+	color: #3a3a3a;
+	border-right: solid 1px #444883;
+}
+
+.obsah {
+	align-self: center;
+}
+
+#vyherni-cisla {
+	display: flex;
+	justify-content: center;
+}
