@@ -15,17 +15,23 @@ function drawNumbers() {
 
     // z osudi vyberu 7 nahodnych cisel
     for (let i = 0; i < 7; i++) {
-        let vyherniIndex = Math.floor(Math.random() * osudi.length);
-        let vyherniCislo = osudi[vyherniIndex];
-        
-        tazenaCisla.push(vyherniCislo);
-        osudi.splice(vyherniIndex, 1);
+
+        setTimeout(function() {
+            drawOneNumber(osudi, tazenaCisla, i)}, 2000*i);
+
     }
+
+ 
+}
+
+function drawOneNumber(osudi, tazenaCisla, i) {
+    let vyherniIndex = Math.floor(Math.random() * osudi.length);
+    let vyherniCislo = osudi[vyherniIndex];
+
+    tazenaCisla.push(vyherniCislo);
+    osudi.splice(vyherniIndex, 1);
 
     // vypis do HTML
-    for (let j = 0; j < tazenaCisla.length; j++) {
-        vyherniCisla.innerHTML += '<span class="cislo">' + tazenaCisla[j] + '</span>';
-    }
-
+    vyherniCisla.innerHTML += '<span class="cislo">' + tazenaCisla[i] + '</span>';
 }
 

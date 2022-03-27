@@ -82,5 +82,16 @@ h1 {
 	font-size: 25px;
 	font-family: 'Paytone One', sans-serif;
 	color: white;
-	background-color: #bb85b6;
+	text-shadow: 2px 2px #3a3a3a;
+	background: linear-gradient(135deg, #F578DC 0%, #B6CEE8 100%);
+	box-shadow: 5px 8px 10px #3a3a3a;
 }
+
+.button:hover {
+	background: linear-gradient(135deg, #f36ed8 0%, #a4c0df 100%);
+}
+
+.button:active {
+	transform: scale(0.98);
+}
+
