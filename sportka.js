@@ -35,7 +35,7 @@ function drawNumbers() {
         osudi.splice(vyherniIndex, 1);
 
         let timeoutid = setTimeout(function() {
-            drawOneNumber(osudi, tazenaCisla, i)}, 500*i);
+            drawOneNumber(osudi, tazenaCisla, i)}, 2000*i);
 
         runningTimeouts.push(timeoutid);
 
@@ -65,6 +65,3 @@ function clearAllRunningTimeouts() {
 
 
 
-
-// history saves too early
-// make more delay
